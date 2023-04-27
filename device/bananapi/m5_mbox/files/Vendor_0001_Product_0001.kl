@@ -21,7 +21,7 @@ key 11       0
 #key 25    P
 #key 26    LEFT_BRACKET
 #key 27    RIGHT_BRACKET
-#key 43    BACKSLASH
+#key 43    BACKSLASH  #反斜杠
 
 #key 30    A
 #key 31    S
@@ -32,8 +32,8 @@ key 11       0
 #key 36    J
 #key 37    K
 #key 38    L
-#key 39    SEMICOLON
-#key 40    APOSTROPHE
+#key 39    SEMICOLON #分号
+#key 40    APOSTROPHE #撇号
 #key 14    DEL
 
 #key 44    Z
@@ -43,9 +43,9 @@ key 11       0
 #key 48    B
 #key 49    N
 #key 50    M
-#key 51    COMMA
-#key 52    PERIOD
-#key 53    SLASH
+#key 51    COMMA #逗号
+#key 52    PERIOD# 句号
+#key 53    SLASH #斜线
 
 key 56    ALT_LEFT
 key 100   ALT_RIGHT
@@ -58,7 +58,7 @@ key 402      CHANNEL_UP
 key 403      CHANNEL_DOWN
 key 115      VOLUME_UP
 key 114      VOLUME_DOWN
-key 113      VOLUME_MUTE
+key 113      VOLUME_MUTE #禁音
 key 28       DPAD_CENTER
 key 103      DPAD_UP
 key 108      DPAD_DOWN

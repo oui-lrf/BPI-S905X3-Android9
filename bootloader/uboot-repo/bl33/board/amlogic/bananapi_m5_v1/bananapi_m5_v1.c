@@ -798,7 +798,14 @@ int checkhw(char * name)
 	ddr_size += CONFIG_SYS_MEM_TOP_HIDE;
 #endif
 
-	if (MESON_CPU_MAJOR_ID_SM1 == cpu_id.family_id) {
+	unsigned int family_id:8; //S905/T968 etc.
+	unsigned int package_id:8; //T968/T966 etc.
+	unsigned int chip_rev:8; //RevA/RevB etc.
+	unsigned int reserve:4;
+	unsigned int layout_ver:4;
+
+	printf("cpu_id.family_id: %x package_id:%x chip_rev:%x reserve:%x layout_ver:%x\n", cpu_id.family_id,package_id,chip_rev,reserve,layout_ver);
+	if (MESON_CPU_MAJOR_ID_SM1 == cpu_id.family_id || MESON_CPU_MAJOR_ID_G12A == cpu_id.family_id) {
 		switch (ddr_size) {
 			case 0xE0000000:
 				strcpy(loc_name, "bananapi_m5_4g\0");

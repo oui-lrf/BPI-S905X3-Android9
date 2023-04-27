@@ -402,7 +402,7 @@ GetMultiDtbEntry(unsigned char *fdt_addr, int *plen){
         memset(aml_dt_buf, 0, 64);
 
         GetDtbId(aml_dt_buf);
-        //printf("aml_dt_buf:%s\n", aml_dt_buf);
+        printf("aml_dt_buf:%s\n", aml_dt_buf);
 
         unsigned int aml_dt_len = aml_dt_buf ? strlen(aml_dt_buf) : 0;
         if (aml_dt_len <= 0) {
