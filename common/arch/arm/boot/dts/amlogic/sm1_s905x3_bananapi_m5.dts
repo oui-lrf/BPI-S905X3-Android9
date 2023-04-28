@@ -16,7 +16,7 @@
  */
 
 /dts-v1/;
-#include "mesong12a.dtsi"
+#include "mesonsm1.dtsi"
 #include "partition_mbox_normal_P_32.dtsi"
 
 / {
