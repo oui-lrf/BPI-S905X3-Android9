@@ -26,15 +26,16 @@ static struct wakeup_source *autosleep_ws;
 static void try_to_suspend(struct work_struct *work)
 {
 	unsigned int initial_count, final_count;
-
+	pr_warn("try_to_suspend autosleep_state:%d\n",autosleep_state);
 	if (!pm_get_wakeup_count(&initial_count, true))
 		goto out;
-
+	pr_warn("try_to_suspend mutex_lock\n");
 	mutex_lock(&autosleep_lock);
 
 	if (!pm_save_wakeup_count(initial_count) ||
 		system_state != SYSTEM_RUNNING) {
 		mutex_unlock(&autosleep_lock);
+		pr_warn("try_to_suspend pm_save_wakeup_count\n");
 		goto out;
 	}
 
@@ -52,6 +53,7 @@ static void try_to_suspend(struct work_struct *work)
 	if (!pm_get_wakeup_count(&final_count, false))
 		goto out;
 
+	pr_warn("try_to_suspend pm_get_wakeup_count end\n");
 	/*
 	 * If the wakeup occured for an unknown reason, wait to prevent the
 	 * system from trying to suspend and waking up in a tight loop.

@@ -100,7 +100,7 @@ static inline void early_suspend(void)
 		}
 
 	pr_info("early_suspend: done\n");
-
+	pr_info("lgcy early_suspend end\n");
 end_early_suspend:
 	mutex_unlock(&early_suspend_lock);
 

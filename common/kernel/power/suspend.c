@@ -609,12 +609,13 @@ static void pm_suspend_marker(char *annotation)
 int pm_suspend(suspend_state_t state)
 {
 	int error;
-
+	pr_info("pm_suspend:%d\n",state);
 	if (state <= PM_SUSPEND_ON || state >= PM_SUSPEND_MAX)
 		return -EINVAL;
 
 	pm_suspend_marker("entry");
 	error = enter_state(state);
+	pr_info("enter_state:%d\n",error);
 	if (error) {
 		suspend_stats.fail++;
 		dpm_save_failed_errno(error);

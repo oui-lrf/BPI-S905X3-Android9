@@ -145,6 +145,7 @@ static ssize_t store_hibernate(struct device *dev,
 			       struct device_attribute *attr,
 			       const char *buf, size_t count)
 {
+	pr_warn("store_hibernate\n");
 	cpumask_var_t offline_mask;
 	int rc;
 
@@ -161,7 +162,7 @@ static ssize_t store_hibernate(struct device *dev,
 		if (rc == -EAGAIN)
 			ssleep(1);
 	} while (rc == -EAGAIN);
-
+	pr_warn("store_hibernate rc:%d\n",rc);
 	if (!rc) {
 		/* All present CPUs must be online */
 		cpumask_andnot(offline_mask, cpu_present_mask,
@@ -174,7 +175,9 @@ static ssize_t store_hibernate(struct device *dev,
 		}
 
 		stop_topology_update();
+		pr_warn("pm_suspend begin\n");
 		rc = pm_suspend(PM_SUSPEND_MEM);
+		pr_warn("pm_suspend after\n");
 		start_topology_update();
 
 		/* Take down CPUs not online prior to suspend */
