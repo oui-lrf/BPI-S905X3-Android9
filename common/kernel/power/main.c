@@ -355,31 +355,31 @@ static suspend_state_t decode_state(const char *buf, size_t n)
 static ssize_t state_store(struct kobject *kobj, struct kobj_attribute *attr,
 			   const char *buf, size_t n)
 {
-	suspend_state_t state;
-	int error;
-	error = pm_autosleep_lock();
-	if (error)
-		return error;
+// 	suspend_state_t state;
+// 	int error;
+// 	error = pm_autosleep_lock();
+// 	if (error)
+// 		return error;
 
-	if (pm_autosleep_state() > PM_SUSPEND_ON) {
-		error = -EBUSY;
-		pr_warn("state_store pm_autosleep_state:%d\n",pm_autosleep_state());
-		goto out;
-	}
+// 	if (pm_autosleep_state() > PM_SUSPEND_ON) {
+// 		error = -EBUSY;
+// 		pr_warn("state_store pm_autosleep_state:%d\n",pm_autosleep_state());
+// 		goto out;
+// 	}
 
-	state = decode_state(buf, n);
-	pr_warn("state_store state:%d\n",state);
-	if (state < PM_SUSPEND_MAX)
-		//error = pm_suspend(state);
-		//error = -EINVAL;
-		error = hibernate();
-	else if (state == PM_SUSPEND_MAX)
-		error = hibernate();
-	else
-		error = -EINVAL;
- out:
-	pm_autosleep_unlock();
-	return error ? error : n;
+// 	state = decode_state(buf, n);
+// 	pr_warn("state_store state:%d\n",state);
+// 	if (state < PM_SUSPEND_MAX)
+// 		error = pm_suspend(state);
+// 		error = hibernate();
+// 	else if (state == PM_SUSPEND_MAX)
+// 		error = hibernate();
+// 	else
+// 		error = -EINVAL;
+//  out:
+// 	pm_autosleep_unlock();
+// 	return error ? error : n;
+	return -EINVAL;
 }
 
 power_attr(state);
