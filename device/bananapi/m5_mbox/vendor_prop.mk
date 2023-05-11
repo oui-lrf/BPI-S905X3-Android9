@@ -98,7 +98,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #adb
 PRODUCT_PROPERTY_OVERRIDES += \
-    service.adb.tcp.port=5555
+    service.adb.tcp.port=55555
 
 #enable/disable afbc
 PRODUCT_PROPERTY_OVERRIDES += \
