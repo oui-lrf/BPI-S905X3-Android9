@@ -379,7 +379,7 @@ static ssize_t state_store(struct kobject *kobj, struct kobj_attribute *attr,
 //  out:
 // 	pm_autosleep_unlock();
 // 	return error ? error : n;
-	return -EINVAL;
+	return 0;
 }
 
 power_attr(state);

@@ -441,6 +441,7 @@ public final class HdmiControlService extends SystemService {
         mCecController = HdmiCecController.create(this);
         if (mCecController != null) {
             if (mHdmiControlEnabled) {
+                Slog.i(TAG, "Device support HDMI-CEC.");
                 initializeCec(INITIATED_BY_BOOT_UP);
             }
         } else {
@@ -461,10 +462,10 @@ public final class HdmiControlService extends SystemService {
         if (mCecController != null) {
             // Register broadcast receiver for power state change.
             IntentFilter filter = new IntentFilter();
-            filter.addAction(Intent.ACTION_SCREEN_OFF);
-            filter.addAction(Intent.ACTION_SCREEN_ON);
-            filter.addAction(Intent.ACTION_SHUTDOWN);
-            filter.addAction(Intent.ACTION_CONFIGURATION_CHANGED);
+            // filter.addAction(Intent.ACTION_SCREEN_OFF);
+            // filter.addAction(Intent.ACTION_SCREEN_ON);
+            // filter.addAction(Intent.ACTION_SHUTDOWN);
+            // filter.addAction(Intent.ACTION_CONFIGURATION_CHANGED);
             getContext().registerReceiver(mHdmiControlBroadcastReceiver, filter);
 
             // Register ContentObserver to monitor the settings change.
