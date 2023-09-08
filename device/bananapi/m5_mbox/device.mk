@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+    
+    
+PRODUCT_COPY_FILES += \
+    device/bananapi/$(PRODUCT_DIR)/files/wan/wan.sh:$(TARGET_COPY_OUT_VENDOR)/etc/wan.sh \
+    device/bananapi/$(PRODUCT_DIR)/files/wan/init.wan.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wan.rc
+
 PRODUCT_COPY_FILES += \
     device/bananapi/common/products/mbox/init.amlogic.system.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.rc \
     device/bananapi/$(PRODUCT_DIR)/init.amlogic.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.usb.rc \
