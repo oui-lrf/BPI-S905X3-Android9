@@ -42,7 +42,7 @@
             android:key="device_pref"
             android:title="@string/device_pref_category_title"
             android:fragment="com.android.tv.settings.device.DevicePrefFragment" />
-        <Preference
+        <!-- <Preference
             android:icon="@drawable/ic_remotes_and_accessories"
             android:key="remotes_and_accessories"
             android:title="@string/remotes_and_accessories_category_title"
@@ -50,6 +50,6 @@
             <intent
                 android:targetClass="com.android.tv.settings.accessories.AddAccessoryActivity"
                 android:targetPackage="com.android.tv.settings"/>
-        </Preference>
+        </Preference> -->
     </PreferenceCategory>
 </PreferenceScreen>
