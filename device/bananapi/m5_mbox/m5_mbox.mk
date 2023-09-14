@@ -542,19 +542,19 @@ endif
 #########################################################################
 #MboxLauncher 
 
-# PRODUCT_PACKAGES += \
-# 	LeanKeyKeyboardPro \
-#     dsjtv \
-#     k12oem \
-#     mqtt_file \
-#     mqtt_server \
-#     readfile3 \
-#     yzd-launcher \
-#     adserver
-
 PRODUCT_PACKAGES += \
-    MboxLauncher \
-	LeanKeyKeyboardPro 
+	LeanKeyKeyboardPro \
+    dsjtv \
+    k12oem \
+    mqtt_file \
+    mqtt_server \
+    readfile3 \
+    yzd-launcher \
+    adserver
+
+# PRODUCT_PACKAGES += \
+#     MboxLauncher \
+# 	LeanKeyKeyboardPro 
 
 #########################################################################
 #
