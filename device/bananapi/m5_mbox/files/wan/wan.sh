@@ -57,8 +57,6 @@ while true; do
 
         # Parse the response if it exists
         parse_response
-    else
-    #   echo "$IP_FILE not exist, set wan ip try agin!!!"
     fi
 
     # Wait for 2 seconds before the next iteration
