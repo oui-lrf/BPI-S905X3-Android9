@@ -1,5 +1,7 @@
 #! /bin/bash
 
+
+
 if [ $# -eq 1 ] && [ $1 == "help" ]; then
     printf "Usage:\n"
     printf "./device/bananapi/common/quick_compile.sh\n"
@@ -17,6 +19,8 @@ project[1]="m5_mbox"      ;soc[1]="S905X3"        ;hardware[1]="BANANAPI_M5"    
 project[2]="m5_tablet"    ;soc[2]="S905X3"        ;hardware[2]="BANANAPI_M5"     ;module[2]="m5_tablet"         ;uboot[2]="bananapi_m5_v1"           ;tdk[2]="g12a/bl32.img"
 project[3]="m2s_mbox"     ;soc[3]="S922X"         ;hardware[3]="BANANAPI_M2S"    ;module[3]="m2s_mbox"          ;uboot[3]="bananapi_m2s_v1"          ;tdk[3]="g12a/bl32.img"
 project[4]="m2s_tablet"   ;soc[4]="S922X"         ;hardware[4]="BANANAPI_M2S"    ;module[4]="m2s_tablet"        ;uboot[4]="bananapi_m2s_v1"          ;tdk[4]="g12a/bl32.img"
+
+
 
 platform_avb_param=""
 platform_type=1
@@ -56,6 +60,9 @@ compile_uboot(){
     cp build/u-boot.bin.usb.tpl ../../device/bananapi/$project_path/upgrade/u-boot.bin.usb.tpl;
     cp build/u-boot.bin.sd.bin ../../device/bananapi/$project_path/upgrade/u-boot.bin.sd.bin;
 }
+
+
+sh device/bananapi/m5_mbox/preinstall/rename.sh
 
 read_platform_type
 source build/envsetup.sh

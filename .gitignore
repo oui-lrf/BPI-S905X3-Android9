@@ -29,3 +29,10 @@
 /vendor/google/
 /vendor/opengapps/
 /vim3_lcd_exist_detect.patch
+device/bananapi/m5_mbox/preinstall/apk/com.dianshijia.hoteltv.apk
+device/bananapi/m5_mbox/preinstall/apk/com.wyt.iexuetang.tv.bailuyun.apk
+device/bananapi/m5_mbox/preinstall/apk/com.yzd.adserver.apk
+device/bananapi/m5_mbox/preinstall/apk/com.yzd.launcher.apk
+device/bananapi/m5_mbox/preinstall/apk/com.yzd.mqttfile.apk
+device/bananapi/m5_mbox/preinstall/apk/com.yzd.mqttserver.apk
+device/bananapi/m5_mbox/preinstall/apk/com.yzd.readfile.apk
