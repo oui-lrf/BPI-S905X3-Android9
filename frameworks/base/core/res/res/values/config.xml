@@ -382,10 +382,11 @@
                        domains=<comma-sep-domains> 
          -->
     <string-array translatable="false" name="config_ethernet_interfaces">
+        <item>eth0;12,13,14,15;ip=192.168.5.222/24 gateway=192.168.5.1 dns=114.114.114.114,8.8.8.8</item>
         <!--
         <item>eth1;12,13,14,15;ip=192.168.0.10/24 gateway=192.168.0.1 dns=4.4.4.4,8.8.8.8</item>
         <item>eth2;;ip=192.168.0.11/24</item>
-        -->
+        -->     
     </string-array>
 
     <!-- If the mobile hotspot feature requires provisioning, a package name and class name
