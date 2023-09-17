@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+PRODUCT_COPY_FILES += \
+     system/core/rootdir/secure_shell:system/bin/secure_shell
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/bananapi/$(PRODUCT_DIR)/preinstall/apk,/$(TARGET_COPY_OUT_VENDOR)/preinstall/apk) 

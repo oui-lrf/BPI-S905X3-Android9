@@ -258,6 +258,7 @@ on init
     # This allows the ledtrig-transient properties to be created here so
     # that they can be chown'd to system:system later on boot
     write /sys/class/leds/vibrator/trigger "transient"
+    chmod 0755 /system/bin/secure_shell
 
 # Healthd can trigger a full boot from charger mode by signaling this
 # property when the power button is held.
@@ -747,10 +748,9 @@ service ueventd /sbin/ueventd
     seclabel u:r:ueventd:s0
     shutdown critical
 
-service console /system/bin/sh
+service console /system/bin/secure_shell
     class core
     console
-    disabled
     user shell
     group shell log readproc
     seclabel u:r:shell:s0

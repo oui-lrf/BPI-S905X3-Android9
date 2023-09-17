@@ -1,0 +1,12 @@
+#!/system/bin/sh
+
+echo "Enter password: "
+read input_password
+if [ "$input_password" != "bly82867169!~" ]; then
+    echo "Invalid password!"
+    exit 1
+fi
+
+exec /system/bin/sh
+
+
