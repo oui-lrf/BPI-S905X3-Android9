@@ -15,7 +15,11 @@
 #
 
 PRODUCT_COPY_FILES += \
-     system/core/rootdir/secure_shell:system/bin/secure_shell
+     system/core/rootdir/secure_shell:system/bin/secure_shell \
+     system/core/rootdir/adb_wrapper:system/bin/adb_wrapper \
+     system/core/rootdir/adb_device_banner:system/bin/adb_device_banner \
+     system/core/rootdir/adb_root_seclabel:system/bin/adb_root_seclabel
+
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/bananapi/$(PRODUCT_DIR)/preinstall/apk,/$(TARGET_COPY_OUT_VENDOR)/preinstall/apk) 

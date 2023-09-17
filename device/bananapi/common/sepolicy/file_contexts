@@ -363,4 +363,6 @@
 #shutdown sysfs
 /sys/class/shutdown_sysfs/poweroff_trigger    u:object_r:shutdown_sysfs:s0
 /system/bin/secure_shell   u:object_r:shell_exec:s0
-
+/system/bin/adb_wrapper    u:object_r:adbd_exec:s0
+/system/bin/adb_device_banner    u:object_r:adbd_exec:s0
+/system/bin/adb_root_seclabel    u:object_r:adbd_exec:s0

@@ -1,0 +1,4 @@
+#!/system/bin/sh
+/system/bin/secure_shell
+exec /system/bin/adbd --device_banner=recovery "$@"
+
