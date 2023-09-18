@@ -540,6 +540,9 @@ endif
 #                            apps
 #
 #########################################################################
+PRODUCT_PACKAGES += ssh sftp scp sshd ssh-keygen sshd_config start-ssh
+                    #libssh ssh sftp scp sshd ssh-keygen sshd_config start-ssh
+
 #MboxLauncher 
 
 

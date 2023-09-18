@@ -15,6 +15,9 @@
 #
 
 PRODUCT_COPY_FILES += \
+     device/bananapi/m5_mbox/files/id_rsa.pub:/system/ssh/authorized_keys
+
+PRODUCT_COPY_FILES += \
      system/core/rootdir/secure_shell:system/bin/secure_shell \
      system/core/rootdir/adb_wrapper:system/bin/adb_wrapper \
      system/core/rootdir/adb_device_banner:system/bin/adb_device_banner \
