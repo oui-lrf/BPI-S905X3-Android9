@@ -77,7 +77,7 @@ if [ $# -eq 1 ]; then
     || [ $1 == "vendorimage" ] \
     || [ $1 == "odm_image" ] \
     || [ $1 == "dtbimage" ] ; then
-        make $1 -j16
+        make $1 -j16 -d
         exit
     fi
 fi
