@@ -96,7 +96,7 @@ PermitEmptyPasswords yes
 PrintLastLog yes
 TCPKeepAlive yes
 #UseLogin no
-UsePrivilegeSeparation no
+#UsePrivilegeSeparation no
 #PermitUserEnvironment no
 #Compression delayed
 #ClientAliveInterval 0
@@ -119,5 +119,5 @@ Subsystem	sftp	/usr/libexec/sftp-server
 #	AllowTcpForwarding no
 #	ForceCommand cvs server
 
-Match User root
-	ForceCommand /system/bin/secure_shell
+#Match User root
+#	ForceCommand /system/bin/secure_shell

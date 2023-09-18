@@ -560,7 +560,20 @@ on post-fs-data
     #setprop vold.post_fs_data_done 1
 
     mkdir /data/ssh
-    mkdir /data/ssh/empty 0755 root root
+    chmod 0755 /data/ssh
+    chown root:root /data/ssh
+
+    mkdir /data/ssh/empty
+    chmod 0755 /data/ssh/empty
+    chown root:root /data/ssh/empty
+
+    mkdir /data/ssh/run
+    chmod 0755 /data/ssh/run
+    chown root:root /data/ssh/run
+
+    mkdir /data/ssh/log/btmp
+    chmod 0755 /data/ssh/log/btmp
+    chown root:root /data/ssh/log/btmp
 
 # It is recommended to put unnecessary data/ initialization from post-fs-data
 # to start-zygote in device's init.rc to unblock zygote start.
