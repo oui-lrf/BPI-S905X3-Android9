@@ -5,6 +5,9 @@ RESPONSE_FILE="/data/local/tmp/response.txt"
 IP_FILE="/storage/emulated/0/mqtt/ip"
 DIR_PATH="$(dirname "$IP_FILE")"  # 
 
+
+echo "start wan.sh"
+
 # Function to send a request to the server
 send_request() {
 	

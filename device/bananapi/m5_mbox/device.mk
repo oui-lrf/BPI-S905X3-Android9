@@ -33,14 +33,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/bananapi/$(PRODUCT_DIR)/start/init.start.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.start.rc    
 
-PRODUCT_COPY_FILES += \
-    device/bananapi/$(PRODUCT_DIR)/preinstall/sh/preinstall.sh:$(TARGET_COPY_OUT_VENDOR)/preinstall/sh/preinstall.sh \
-    device/bananapi/$(PRODUCT_DIR)/preinstall/sh/init.preinstall.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.preinstall.rc
-
-    
-PRODUCT_COPY_FILES += \
-    device/bananapi/$(PRODUCT_DIR)/files/wan/wan.sh:$(TARGET_COPY_OUT_VENDOR)/etc/wan.sh \
-    device/bananapi/$(PRODUCT_DIR)/files/wan/init.wan.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wan.rc
 
 PRODUCT_COPY_FILES += \
     device/bananapi/common/products/mbox/init.amlogic.system.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.rc \
