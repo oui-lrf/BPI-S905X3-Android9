@@ -574,6 +574,13 @@ on post-fs-data
     mkdir /data/ssh/log/btmp
     chmod 0755 /data/ssh/log/btmp
     chown root:root /data/ssh/log/btmp
+    
+
+    mkdir /data/dropbear
+    chmod 0755 /data/dropbear
+    chown root:root /data/dropbear
+
+    
 
 # It is recommended to put unnecessary data/ initialization from post-fs-data
 # to start-zygote in device's init.rc to unblock zygote start.

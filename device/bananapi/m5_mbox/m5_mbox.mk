@@ -540,8 +540,14 @@ endif
 #                            apps
 #
 #########################################################################
+
+#dropbear
+PRODUCT_PACKAGES += dp-dropbear_dss_host_key  dp-dropbear_rsa_host_key  dp-authorized_keys  dp-dropbear.pid   dp-passwd
+PRODUCT_PACKAGES += dp-dropbear  dp-dropbearconvert  dp-dropbearkey  dp-scp
+
+#openssh
 PRODUCT_PACKAGES += ssh sftp scp sshd ssh-keygen sshd_config start-ssh
-                    #libssh ssh sftp scp sshd ssh-keygen sshd_config start-ssh
+                
 
 #MboxLauncher 
 
