@@ -1,4 +1,7 @@
-on property:sys.boot_completed=1
+on boot
+    start sleep_service
+
+on property:service.sleep_service.exit_code=0
     start start_script
     start sshd    
 
@@ -10,3 +13,15 @@ service start_script /system/bin/sh /vendor/etc/init/start/start.sh
     user root
     group root system
     seclabel u:r:shell:s0 
+
+service sshd /system/bin/start-ssh
+    disable
+    class main
+    oneshot
+    console
+    user root
+    group root system
+    seclabel u:r:shell:s0 
+
+service sleep_service /system/bin/sleep 30
+    oneshot
