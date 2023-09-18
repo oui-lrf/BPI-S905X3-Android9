@@ -9,7 +9,7 @@ DEST_DIR="$SCRIPT_DIR/apk"
 
 echo "SRC_DIR:"$SRC_DIR
 
-rm  $DEST_DIR *.apk
+rm  -rf $DEST_DIR
 # 创建目标目录如果它不存在
 mkdir -p "$DEST_DIR"
 
