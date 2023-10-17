@@ -54,7 +54,7 @@ read_platform_type() {
 compile_uboot(){
     echo -e "[./mk $uboot_name --systemroot]"
     ./mk $uboot_name --systemroot;
-
+    echo "build root complate!"
     cp build/u-boot.bin ../../device/bananapi/$project_path/bootloader.img;
     cp build/u-boot.bin.usb.bl2 ../../device/bananapi/$project_path/upgrade/u-boot.bin.usb.bl2;
     cp build/u-boot.bin.usb.tpl ../../device/bananapi/$project_path/upgrade/u-boot.bin.usb.tpl;
