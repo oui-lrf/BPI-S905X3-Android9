@@ -60,7 +60,7 @@
 
 ddr_set_t __ddr_setting[] __attribute__ ((section(".ddr_settings"))) = {
 {
-	// g12a 4layer 4pcs ddr4 rank01 (1320)(T204)
+	//1 g12a 4layer 4pcs ddr4 rank01 (1320)(T204)
 	.board_id				= CONFIG_BOARD_ID_MASK,
 	.version				= 1,
 	.dram_rank_config		= CONFIG_DDR0_32BIT_RANK01_CH0,
@@ -133,7 +133,7 @@ ddr_set_t __ddr_setting[] __attribute__ ((section(".ddr_settings"))) = {
 	.training_offset 		= (1<<3) | (4<<0),//read dqs offset after training,bit3=0 right move,bit3=1 left move,bit[2:0] offset step
 },
 {
-	// g12a 4layer 2pcs ddr4 rank0 (1320)(U200)
+	//2 g12a 4layer 2pcs ddr4 rank0 (1320)(U200)
 	.board_id				= CONFIG_BOARD_ID_MASK,
 	.version				= 1,
 	.dram_rank_config		= CONFIG_DDR0_32BIT_RANK0_CH0,
@@ -204,7 +204,7 @@ ddr_set_t __ddr_setting[] __attribute__ ((section(".ddr_settings"))) = {
 	.fast_boot[0]			= 1,
 },
 {
-	// g12a 4layer 4pcs ddr3 rank01 (912)(U212)
+	//3 g12a 4layer 4pcs ddr3 rank01 (912)(U212)
 	.board_id				= CONFIG_BOARD_ID_MASK,
 	.version				= 1,
 	.dram_rank_config		= CONFIG_DDR0_32BIT_RANK01_CH0,
@@ -286,7 +286,7 @@ ddr_set_t __ddr_setting[] __attribute__ ((section(".ddr_settings"))) = {
 	.fast_boot[0]			= 1,
 },
 {
-	// g12a 4layer 2pcs ddr3 rank0 (912)
+	//4 g12a 4layer 2pcs ddr3 rank0 (912)
 	.board_id				= CONFIG_BOARD_ID_MASK,
 	.version				= 1,
 	.dram_rank_config		= CONFIG_DDR0_32BIT_RANK0_CH0,
@@ -368,14 +368,14 @@ ddr_set_t __ddr_setting[] __attribute__ ((section(".ddr_settings"))) = {
 	.fast_boot[0]			= 1,
 },
 {
-	/* g12a skt (u209) lpddr4 */
+	/*5 g12a skt (u209) lpddr4 */
 	.board_id				= CONFIG_BOARD_ID_MASK,
 	.version				= 1,
 	//.dram_rank_config		= CONFIG_DDR0_32BIT_RANK01_CH0,
 	.dram_rank_config		= CONFIG_DDR0_32BIT_RANK01_CH01,
 	.ddr_rfc_type			= DDR_RFC_TYPE_LPDDR4_8Gbx1,
 	.DramType				= CONFIG_DDR_TYPE_LPDDR4,
-	.DRAMFreq				= {1392, 0, 0, 0},
+	.DRAMFreq				= {1200, 0, 0, 0},
 	.ddr_base_addr			= CFG_DDR_BASE_ADDR,
 	.ddr_start_offset		= CFG_DDR_START_OFFSET,
 	//.imem_load_addr			= 0xFFFC0000, //sram
@@ -442,7 +442,7 @@ ddr_set_t __ddr_setting[] __attribute__ ((section(".ddr_settings"))) = {
 	.fast_boot[0]			= 1,
 },
 {
-	/* g12a Y2 dongle */
+	/*6 g12a Y2 dongle */
 	.board_id				= CONFIG_BOARD_ID_MASK,
 	.version				= 1,
 	//.dram_rank_config		= CONFIG_DDR0_32BIT_RANK01_CH0,
