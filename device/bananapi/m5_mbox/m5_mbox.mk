@@ -561,9 +561,6 @@ PRODUCT_PACKAGES += \
     # yzd-launcher \
     # adserver
 
-# PRODUCT_PACKAGES += \
-#     MboxLauncher \
-# 	LeanKeyKeyboardPro 
 
 #########################################################################
 #

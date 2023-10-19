@@ -78,9 +78,9 @@ PRODUCT_PACKAGES += \
     NativeImagePlayer
 
 #MboxLauncher
-PRODUCT_PACKAGES += \
-    MboxLauncher
-endif
+# PRODUCT_PACKAGES += \
+#     MboxLauncher
+# endif
 
 #screencontrol
 PRODUCT_PACKAGES += \
