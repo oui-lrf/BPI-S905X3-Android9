@@ -12,6 +12,7 @@ echo "SRC_DIR:"$SRC_DIR
 rm  -rf $DEST_DIR
 # 创建目标目录如果它不存在
 mkdir -p "$DEST_DIR"
+chmod 777 "$DEST_DIR"
 
 for src_file in $SRC_DIR/*.apk; do
     echo "file:"$src_file
