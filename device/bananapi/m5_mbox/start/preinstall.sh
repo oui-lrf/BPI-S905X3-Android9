@@ -21,6 +21,7 @@ for apk_path in $PREINSTALL_DIR*.apk; do
         # 授予访问照片、媒体内容和文件的权限
         pm grant "$pkg_name" android.permission.READ_EXTERNAL_STORAGE
         pm grant "$pkg_name" android.permission.WRITE_EXTERNAL_STORAGE
+        appops set $pkg_name REQUEST_INSTALL_PACKAGES allow
         if [ "$pkg_name" == "com.yzd.launcher" ]; then
             echo "Disabling BootReceiver for $pkg_name..."
             pm disable com.yzd.launcher/com.example.install.receiver.BootReceiver
