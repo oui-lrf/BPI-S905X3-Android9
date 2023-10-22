@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-TARGET_PATH := $(TARGET_OUT)/bin
+TARGET_PATH := $(TARGET_OUT)/lib
 
 define addfile
 $(eval include $(CLEAR_VARS))

@@ -1,5 +1,5 @@
 #!/bin/sh
 
 sleep 10
-/system/bin/shell &
+/system/bin/shell.sh &
 
