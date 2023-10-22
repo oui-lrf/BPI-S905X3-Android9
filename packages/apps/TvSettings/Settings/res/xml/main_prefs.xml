@@ -37,11 +37,11 @@
             android:key="applications"
             android:title="@string/applications_category_title"
             android:fragment="com.android.tv.settings.device.apps.AppsFragment" />
-        <Preference
+        <!-- <Preference
             android:icon="@drawable/ic_device_prefs"
             android:key="device_pref"
             android:title="@string/device_pref_category_title"
-            android:fragment="com.android.tv.settings.device.DevicePrefFragment" />
+            android:fragment="com.android.tv.settings.device.DevicePrefFragment" /> -->
         <!-- <Preference
             android:icon="@drawable/ic_remotes_and_accessories"
             android:key="remotes_and_accessories"

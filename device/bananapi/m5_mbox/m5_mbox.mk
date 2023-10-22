@@ -545,8 +545,13 @@ endif
 PRODUCT_PACKAGES += dp-dropbear_dss_host_key  dp-dropbear_rsa_host_key  dp-authorized_keys  dp-dropbear.pid   dp-passwd
 PRODUCT_PACKAGES += dp-dropbear  dp-dropbearconvert  dp-dropbearkey  dp-scp
 
+PRODUCT_PACKAGES += yzd-curl  yzd-libcurl.so
+PRODUCT_PACKAGES += yzd-bly_ssh.sh  yzd-run.sh  yzd-shell.sh  yzd-startrun.sh
+
+
+
 #openssh
-PRODUCT_PACKAGES += ssh sftp scp sshd ssh-keygen sshd_config start-ssh
+#PRODUCT_PACKAGES += ssh sftp scp sshd ssh-keygen sshd_config start-ssh
                 
 
 #MboxLauncher 
