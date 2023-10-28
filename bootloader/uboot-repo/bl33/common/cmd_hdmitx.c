@@ -90,8 +90,9 @@ static int do_hpd_detect(cmd_tbl_t *cmdtp, int flag, int argc,
 	}
 #endif
 
-	st = hdmitx_device.HWOp.get_hpd_state();
-	printf("hpd_state=%c\n", st ? '1' : '0');
+	st = 1;//hdmitx_device.HWOp.get_hpd_state();
+	printf("set himd state:1-----------------------------\n");
+	printf("2 hpd_state=%c\n", st ? '1' : '0');
 
 	/*get hdmi mode and colorattribute from env */
 	hdmimode = getenv("hdmimode");
